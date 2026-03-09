@@ -1,5 +1,10 @@
 # ESP32-S3 with 3.5" Screen (JC3248W535C)
 
+> [!IMPORTANT]
+> **This is a rare display module!** If you are looking for "Marauder" or other ready-to-flash "hacking" firmwares, **they will NOT work** on this specific hardware. 
+> Most ESP32-S3 3.5" tools are built for the cheaper "Yellow/Blue" modules (ILI9488/ST7796). This board uses a unique **QSPI AXS15231B** controller which requires custom drivers and PSRAM. 
+> Use this repository to learn how to correctly initialize this display via Arduino/GFX.
+
 ## Technical Specifications
 
 * **Module:** JC3248W535C (ESP32-S3-WROOM-1).

@@ -1,5 +1,9 @@
 # Developer Guide: Getting Started with ESP32-S3 JC3248W535C (3.5" IPS)
 
+> [!CAUTION]
+> **PLEASE NOTE:** This module is **not compatible** with "ESP32 Marauder" or other common hacker tools/firmwares found online. Those tools are designed for cheaper SPI displays (ST7796/ILI9488). 
+> The **JC3248W535C** uses a rare **QSPI AXS15231B** controller. If you flash standard firmwares, the screen will remain black. This guide shows how to handle this unique hardware correctly.
+
 If you've just bought the **JC3248W535C** (often labeled as Guition or DIYmalls 3.5"), you've probably noticed that standard libraries like `TFT_eSPI` don't work out of the box. Here is why and how to fix it.
 
 ## The Technical Challenge
