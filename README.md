@@ -5,6 +5,19 @@
 > Most ESP32-S3 3.5" tools are built for the cheaper "Yellow/Blue" modules (ILI9488/ST7796). This board uses a unique **QSPI AXS15231B** controller which requires custom drivers and PSRAM. 
 > Use this repository to learn how to correctly initialize this display via Arduino/GFX.
 
+## Project Overview: Finger Painting Test
+
+This sketch serves as a **comprehensive functional test** for the JC3248W535C module. It allows you to verify:
+*   **Display Integrity:** Full-screen rendering via QSPI and PSRAM.
+*   **Touch Precision:** Multi-point touch tracking and coordinate mapping.
+*   **Color Accuracy:** A palette of 5 colors to verify RGB565 rendering.
+*   **Performance:** Fluidity of the `Arduino_Canvas` buffer at 480x320 resolution.
+
+**Features:**
+*   Smooth drawing with line interpolation.
+*   "CLEAR" button with a 200ms debounce to prevent accidental resets.
+*   Bottom color palette for easy switching during testing.
+
 ## Technical Specifications
 
 * **Module:** JC3248W535C (ESP32-S3-WROOM-1).
