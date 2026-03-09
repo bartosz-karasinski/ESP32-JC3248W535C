@@ -1,0 +1,20 @@
+{
+  "cpu": {
+    "fqbn": "esp32:esp32:esp32s3",
+    "name": "ESP32S3 Dev Module",
+    "options": "CDCOnBoot=cdc,USBMode=hwcdc,PSRAM=opi,FlashSize=16M"
+  },
+  "included_libs": [
+    {
+      "name": "GFX Library for Arduino",
+      "version": "1.6.5"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "JC3248W535C",
+      "fqbn": "esp32:esp32:esp32s3:CDCOnBoot=cdc,USBMode=hwcdc,PSRAM=opi,FlashSize=16M",
+      "port": "COM4"
+    }
+  ]
+}
