@@ -7,13 +7,26 @@
 * **Driver:** AXS15231B (QSPI).
 * **Memory:** 16MB Flash, 8MB PSRAM (OPI).
 
-## Arduino CLI Configuration (Critical)
+## Required Libraries
 
-To ensure the code functions correctly, the compilation MUST include the PSRAM flag and correct Flash settings:
+To compile this project, you must install the following library via the **Arduino Library Manager**:
+*   **GFX Library for Arduino** (by Moon On Our Nation) - Version 1.6.5 or newer.
+
+## Arduino IDE Configuration (Critical)
+
+Standard settings will **not** work. You must manually configure the following under the **Tools** menu:
+
+*   **Board:** `ESP32S3 Dev Module`
+*   **USB CDC On Boot:** `Enabled` (to see Serial output)
+*   **Flash Size:** `16MB (128Mb)`
+*   **PSRAM:** **`OPI PSRAM`** (Mandatory! Without this, the Canvas allocation will fail and the screen will remain black).
+
+## Arduino CLI Configuration
+
+To ensure the code functions correctly via CLI, use the following flags:
 
 ```powershell
 arduino-cli compile --fqbn esp32:esp32:esp32s3:CDCOnBoot=cdc,USBMode=hwcdc,PSRAM=opi,FlashSize=16M
-
 ```
 
 ## Display Pinout (QSPI)
